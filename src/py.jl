@@ -11,6 +11,9 @@ function install_py(use_julia_conda=true)
     Pkg.add("PyPlot")
     Pkg.build("PyPlot")
     
-    using PyCall
-    using PyPlot
+    # precompile
+    pkg_list = ["PyCall", "PyPlot"]
+    for pkg = pkg_list
+        eval(:(using $(Symbol(pkg))))
+    end
 end
