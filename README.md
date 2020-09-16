@@ -1,6 +1,6 @@
 # FlavellPkg.jl
 ## Default
-Command: `install_default()`
+Command: `install_default()`  
 List: `PyCall`, `PyPlot`, `IJulia`, `HDF5`, `NaNMath`, `LsqFit`, `Optim`, `Interpolations`, `Distributions`, `DataStructures`, `BenchmarkTools`, `ProgressMeter`, `Images`, `Clustering`, `MultivariateStats`
 
 ## Behavior packages
