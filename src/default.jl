@@ -5,7 +5,8 @@ function install_default(use_julia_conda=true)
     install_py(use_julia_conda)
     
     pkg_list = ["IJulia", "HDF5", "NaNMath", "LsqFit", "Optim", "Interpolations", "Distributions",
-    "DataStructures", "BenchmarkTools", "ProgressMeter", "Images", "Clustering", "MultivariateStats"]
+    "DataStructures", "BenchmarkTools", "ProgressMeter", "Images", "Clustering", "MultivariateStats",
+    "FlavellBase"]
 
     # adding
     for pkg = pkg_list
