@@ -14,7 +14,7 @@ Ignore the warning message `Package FlavellPkg does not have ... in its dependen
 ## Available install scripts
 ### Default
 Command: `install_default()`  
-List: `PyCall`, `PyPlot`, `IJulia`, `HDF5`, `NaNMath`, `LsqFit`, `Optim`, `Interpolations`, `Distributions`, `DataStructures`, `BenchmarkTools`, `ProgressMeter`, `Images`, `Clustering`, `MultivariateStats`
+List: `PyCall`, `PyPlot`, `IJulia`, `HDF5`, `NaNMath`, `LsqFit`, `Optim`, `Interpolations`, `Distributions`, `DataStructures`, `BenchmarkTools`, `ProgressMeter`, `Images`, `Clustering`, `MultivariateStats`, `FlavellBase`
 
 ### Behavior packages
 Command: `install_behavior()`  
@@ -22,4 +22,4 @@ List: `BehaviorData`, `BehaviorPlot`
 
 ### Imaging packages
 Command: `install_imaging()`  
-List: `FlavellBase`, `MHDIO`, `ImageDataIO`, `WormCurveFinder`, `WormFeatureDetector`, `SegmentationTools`, `CaAnalysis`
+List: `MHDIO`, `ImageDataIO`, `WormCurveFinder`, `WormFeatureDetector`, `SegmentationTools`, `CaAnalysis`, `ND2Process`
