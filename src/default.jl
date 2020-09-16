@@ -1,6 +1,9 @@
 import Pkg
 
-function install_default()
+function install_default(use_julia_conda=true)
+    # pycall, pyplot
+    install_py(use_julia_conda)
+    
     pkg_list = ["IJulia", "HDF5", "NaNMath", "LsqFit", "Optim", "Interpolations", "Distributions",
     "DataStructures", "BenchmarkTools", "ProgressMeter", "Images", "Clustering", "MultivariateStats"]
 
@@ -12,12 +15,4 @@ function install_default()
     for pkg = pkg_list
       eval(:(using $(Symbol(pkg))))
     end
-
-    # setting to use julia python distribution (instead of any existing system one)
-    Pkg.add("PyCall")
-    ENV["PYTHON"] = ""
-    Pkg.build("PyCall")
-    Pkg.add("PyPlot")
-    Pkg.build("PyPlot")
-    Pkg.add("IJulia")
 end
