@@ -9,6 +9,7 @@
 using FlavellPkg
 install_default()
 ```
+Ignore the warning message `Package FlavellPkg does not have ... in its dependencies`  
 
 ## Available install scripts
 ### Default
