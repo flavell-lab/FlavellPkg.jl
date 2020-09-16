@@ -14,14 +14,10 @@ function install_default()
     end
 
     # setting to use julia python distribution (instead of any existing system one)
-    ENV["PYTHON"] = ""
     Pkg.add("PyCall")
-    Pkg.build("PyCall")
-    using PyCall
-
-    Pkg.add("PyPlot")
     ENV["PYTHON"] = ""
+    Pkg.build("PyCall")
+    Pkg.add("PyPlot")
     Pkg.build("PyPlot")
-    using PyPlot
-    using IJulia
+    Pkg.add("IJulia")
 end
