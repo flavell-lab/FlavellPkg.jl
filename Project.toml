@@ -1,0 +1,4 @@
+name = "FlavellPkg"
+uuid = "9a491ba0-93a9-4ff4-b359-a8c284c7d4ba"
+authors = ["Jungsoo Kim <jungsoo@mit.edu>"]
+version = "0.1.0"
