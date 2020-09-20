@@ -26,6 +26,6 @@ function install_default(use_julia_conda=true)
     # precompiling
     for pkg = pkg_list
         pkg_name = isa(pkg, Pkg.Types.PackageSpec) ? pkg.name : pkg
-        eval(:(using $(Symbol(pkg))))
+        eval(:(using $(Symbol(pkg_name))))
     end
 end
