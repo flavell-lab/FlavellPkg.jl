@@ -22,4 +22,4 @@ List: `BehaviorData`, `BehaviorPlot`
 
 ### Imaging packages
 Command: `install_imaging()`  
-List: `MHDIO`, `ImageDataIO`, `WormCurveFinder`, `WormFeatureDetector`, `SegmentationTools`, `CaAnalysis`, `ND2Process`
+List: `MHDIO`, `ImageDataIO`, `WormCurveFinder`, `WormFeatureDetector`, `SegmentationTools`, `CaAnalysis`, `ND2Process`, `RegistrationGraph`, `ExtractRegisteredData`
