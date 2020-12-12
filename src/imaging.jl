@@ -3,9 +3,9 @@ import Pkg
 function install_imaging()
     pkg_list=  []
     # add private pkg
-    for pkg = ["MHDIO", "ImageDataIO", "WormCurveFinder",
+    for pkg = ["MHDIO", "ImageDataIO", "WormCurveFinder", "Clustering",
         "WormFeatureDetector", "SegmentationTools", "CaAnalysis",
-        "ND2Process", "RegistrationGraph", "ExtractRegisteredData"]
+        "ND2Process", "SLURMManager", "RegistrationGraph", "ExtractRegisteredData"]
         push!(pkg_list, Pkg.PackageSpec(name=pkg,
             url="git@github.com:flavell-lab/$(pkg).jl.git"))
     end
