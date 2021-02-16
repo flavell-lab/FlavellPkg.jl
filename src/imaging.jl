@@ -24,8 +24,4 @@ function install_imaging()
         pkg_name = isa(pkg, Pkg.Types.PackageSpec) ? pkg.name : pkg
         eval(:(using $(Symbol(pkg_name))))
     end
-    using WebIO
-    # install WebIO Jupyter Lab extension
-    WebIO.install_jupyter_labextension()
-    WebIO.install_jupyter_nbextension()
 end
