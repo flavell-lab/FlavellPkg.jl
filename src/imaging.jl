@@ -19,9 +19,4 @@ function install_imaging()
     for pkg = pkg_list
         Pkg.add(pkg)
     end
-    # precompiling
-    for pkg = pkg_list
-        pkg_name = isa(pkg, Pkg.Types.PackageSpec) ? pkg.name : pkg
-        eval(:(using $(Symbol(pkg_name))))
-    end
 end
