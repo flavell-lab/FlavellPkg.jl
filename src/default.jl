@@ -15,7 +15,7 @@ function install_default(use_julia_conda=true)
     # add registered pkg
     for pkg = ["IJulia", "HDF5", "NaNMath", "LsqFit", "Optim", "Interpolations",
          "Distributions", "DataStructures", "BenchmarkTools", "ProgressMeter",
-         "Images", "Clustering", "MultivariateStats"]
+         "Images", "Clustering", "MultivariateStats", "CUDA"]
         push!(pkg_list, pkg)
     end
 
