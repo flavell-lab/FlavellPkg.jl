@@ -15,17 +15,12 @@ function install_default(use_julia_conda=true)
     # add registered pkg
     for pkg = ["IJulia", "HDF5", "NaNMath", "LsqFit", "Optim", "Interpolations",
          "Distributions", "DataStructures", "BenchmarkTools", "ProgressMeter",
-         "Images", "Clustering", "MultivariateStats"]
+         "Images", "Clustering", "MultivariateStats", "CUDA"]
         push!(pkg_list, pkg)
     end
 
     # adding
     for pkg = pkg_list
       Pkg.add(pkg)
-    end
-    # precompiling
-    for pkg = pkg_list
-        pkg_name = isa(pkg, Pkg.Types.PackageSpec) ? pkg.name : pkg
-        eval(:(using $(Symbol(pkg_name))))
     end
 end
