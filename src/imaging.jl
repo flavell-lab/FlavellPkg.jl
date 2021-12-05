@@ -1,13 +1,19 @@
 import Pkg
 
-function install_imaging()
+function install_imaging(install_dev_branch=false)
     pkg_list = []
     # add private pkg
     for pkg = ["GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
         "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "SegmentationStats", "UNet2D", "BehaviorDataNIR"]
-        push!(pkg_list, Pkg.PackageSpec(name=pkg,
-            url="git@github.com:flavell-lab/$(pkg).jl.git"))
+
+        if install_dev_branch
+            push!(pkg_list, Pkg.PackageSpec(name=pkg,
+                url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop"))
+        else
+            push!(pkg_list, Pkg.PackageSpec(name=pkg,
+                url="git@github.com:flavell-lab/$(pkg).jl.git"))
+        end
     end
 
     for pkg = ["Statistics", "StatsBase", "DelimitedFiles", "Cairo", "Interact", "WebIO",
