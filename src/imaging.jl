@@ -12,7 +12,7 @@ function install_imaging(install_dev_branch=false)
                 pkg = Pkg.PackageSpec(name=pkg,
                     url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop")
                 Pkg.add(pkg)
-            except # develop does not exist
+            catch # develop does not exist
                 pkg = Pkg.PackageSpec(name=pkg,
                     url="git@github.com:flavell-lab/$(pkg).jl.git")
                 Pkg.add(pkg)
