@@ -8,8 +8,15 @@ function install_imaging(install_dev_branch=false)
         "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "SegmentationStats", "UNet2D", "BehaviorDataNIR"]
 
         if install_dev_branch
-            push!(pkg_list, Pkg.PackageSpec(name=pkg,
-                url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop"))
+            try
+                pkg = Pkg.PackageSpec(name=pkg,
+                    url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop"))
+                Pkg.add(pkg)
+            except # develop does not exist
+                pkg = Pkg.PackageSpec(name=pkg,
+                    url="git@github.com:flavell-lab/$(pkg).jl.git"))
+                Pkg.add(pkg)
+            end
         else
             push!(pkg_list, Pkg.PackageSpec(name=pkg,
                 url="git@github.com:flavell-lab/$(pkg).jl.git"))
