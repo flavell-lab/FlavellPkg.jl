@@ -3,9 +3,9 @@ import Pkg
 function install_imaging(install_dev_branch=false)
     pkg_list = []
     # add private pkg
-    for pkg = ["SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering",
+    for pkg = ["SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
-        "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "SegmentationStats", "UNet2D", "BehaviorDataNIR"]
+        "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "SegmentationStats", "BehaviorDataNIR"]
 
         if install_dev_branch
             try
