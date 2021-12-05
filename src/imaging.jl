@@ -3,7 +3,7 @@ import Pkg
 function install_imaging(install_dev_branch=false)
     pkg_list = []
     # add private pkg
-    for pkg = ["GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering",
+    for pkg = ["SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
         "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "SegmentationStats", "UNet2D", "BehaviorDataNIR"]
 
