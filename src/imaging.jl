@@ -22,10 +22,10 @@ function install_imaging(install_dev_branch=false)
 
         if install_dev_branch
             try
-                pkg_ = Pkg.PackageSpec(name=pkg,
-                    url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop")
-                Pkg.add(pkg_)
+                push!(pkg_list, Pkg.PackageSpec(name=pkg,
+                    url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop"))
             catch # develop does not exist
+                @warn("Develop branch of $(pkg) not found.")
                 push!(pkg_list, Pkg.PackageSpec(name=pkg,
                     url="git@github.com:flavell-lab/$(pkg).jl.git"))
             end
