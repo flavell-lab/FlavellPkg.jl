@@ -4,7 +4,7 @@ function install_imaging(install_dev_branch=false)
     pkg_list = []
 
     for pkg = ["Statistics", "StatsBase", "DelimitedFiles", "Cairo", "Interact", "WebIO",
-        "Plots", "Dates", "JLD2", "TotalVariation", "VideoIO", "FFTW", "GLMNet", "Suppressor",
+        "Plots", "Dates", "JLD2", "VideoIO", "FFTW", "GLMNet", "Suppressor",
         "Revise", "InformationMeasures", "LsqFit"]
        push!(pkg_list, pkg)
     end
@@ -14,7 +14,7 @@ function install_imaging(install_dev_branch=false)
     end
 
     # add private pkg
-    for pkg = ["SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
+    for pkg = ["TotalVariation", "SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
         "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR"]
 
