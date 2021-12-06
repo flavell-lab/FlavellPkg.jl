@@ -2,6 +2,19 @@ import Pkg
 
 function install_imaging(install_dev_branch=false)
     pkg_list = []
+
+    for pkg = ["Statistics", "StatsBase", "DelimitedFiles", "Cairo", "Interact", "WebIO",
+        "Plots", "Dates", "JLD2", "TotalVariation", "VideoIO", "FFTW", "GLMNet", "Suppressor",
+        "Revise", "InformationMeasures", "LsqFit"]
+       push!(pkg_list, pkg)
+    end
+
+    for pkg = pkg_list
+        Pkg.add(pkg)
+    end
+
+    pkg_list = []
+
     # add private pkg
     for pkg = ["SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
@@ -20,12 +33,6 @@ function install_imaging(install_dev_branch=false)
             push!(pkg_list, Pkg.PackageSpec(name=pkg,
                 url="git@github.com:flavell-lab/$(pkg).jl.git"))
         end
-    end
-
-    for pkg = ["Statistics", "StatsBase", "DelimitedFiles", "Cairo", "Interact", "WebIO",
-        "Plots", "Dates", "JLD2", "TotalVariation", "VideoIO", "FFTW", "GLMNet", "Suppressor",
-        "Revise", "InformationMeasures", "LsqFit"]
-       push!(pkg_list, pkg)
     end
 
     # adding
