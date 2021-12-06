@@ -5,7 +5,7 @@ function install_imaging(install_dev_branch=false)
     # add private pkg
     for pkg = ["SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
-        "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "SegmentationStats", "BehaviorDataNIR"]
+        "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR"]
 
         if install_dev_branch
             try
