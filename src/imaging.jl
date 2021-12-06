@@ -32,5 +32,4 @@ function install_imaging(install_dev_branch=false)
     for pkg = pkg_list
         Pkg.add(pkg)
     end
-    println("Please install the torch and unet2d Python packages in Julia's python environment.")
 end
