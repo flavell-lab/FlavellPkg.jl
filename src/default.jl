@@ -1,9 +1,6 @@
 import Pkg
 
 function install_default(use_julia_conda=true)
-    # pycall, pyplot
-    install_py(use_julia_conda)
-
     pkg_list = []
 
     # add private pkg
