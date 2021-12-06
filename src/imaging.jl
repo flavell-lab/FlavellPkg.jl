@@ -13,8 +13,6 @@ function install_imaging(install_dev_branch=false)
         Pkg.add(pkg)
     end
 
-    pkg_list = []
-
     # add private pkg
     for pkg = ["SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
@@ -22,21 +20,19 @@ function install_imaging(install_dev_branch=false)
 
         if install_dev_branch
             try
-                push!(pkg_list, Pkg.PackageSpec(name=pkg,
-                    url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop"))
+                pkg_ = Pkg.PackageSpec(name=pkg,
+                    url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop")
+                Pkg.add(pkg_)
             catch # develop does not exist
                 @warn("Develop branch of $(pkg) not found.")
-                push!(pkg_list, Pkg.PackageSpec(name=pkg,
-                    url="git@github.com:flavell-lab/$(pkg).jl.git"))
+                pkg_ = Pkg.PackageSpec(name=pkg,
+                    url="git@github.com:flavell-lab/$(pkg).jl.git")
+                Pkg.add(pkg_)
             end
         else
-            push!(pkg_list, Pkg.PackageSpec(name=pkg,
-                url="git@github.com:flavell-lab/$(pkg).jl.git"))
+            pkg_ = Pkg.PackageSpec(name=pkg,
+                url="git@github.com:flavell-lab/$(pkg).jl.git")
+            Pkg.add(pkg_)
         end
-    end
-
-    # adding
-    for pkg = pkg_list
-        Pkg.add(pkg)
     end
 end
