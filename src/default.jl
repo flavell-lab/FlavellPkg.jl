@@ -1,12 +1,12 @@
 import Pkg
 
-function install_default(use_julia_conda=true)
+function install_default()
     pkg_list = []
 
     # add registered pkg
-    for pkg = ["IJulia", "HDF5", "NaNMath", "LsqFit", "Optim", "Interpolations",
+    for pkg = ["CUDA", "IJulia", "HDF5", "NaNMath", "LsqFit", "Optim", "Interpolations",
          "Distributions", "DataStructures", "BenchmarkTools", "ProgressMeter",
-         "Images", "Clustering", "MultivariateStats", "CUDA"]
+         "Images", "Clustering", "MultivariateStats"]
         push!(pkg_list, pkg)
     end
 
