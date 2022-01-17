@@ -14,7 +14,7 @@ function install_imaging(install_dev_branch=false)
     end
 
     # add private pkg
-    for pkg = ["TotalVariation", "SegmentationStats", "GPUFilter", "MHDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
+    for pkg = ["TotalVariation", "SegmentationStats", "GPUFilter", "NRRDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
         "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR"]
 
