@@ -11,7 +11,7 @@ function check_develop(remote_url, verbose=true)
     if branch_exists
         println("$remote_url - has develop")
     else
-        println("$remote url - does not have develop")
+        println("$remote_url - does not have develop")
     end
 
     branch_exists
