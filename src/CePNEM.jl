@@ -1,4 +1,4 @@
-function install_imaging(install_dev_branch=false)
+function install_CePNEM(install_dev_branch=false)
     pkg_list = Pkg.Types.PackageSpec[]
 
     for pkg = ["ColorVectorSpace", "MultipleTesting", "Gen", "UMAP", "ImageShow", "ImageCore", "Combinatorics",
