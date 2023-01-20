@@ -1,18 +1,12 @@
 import Pkg
-
 function install_default()
-    pkg_list = []
+    pkg_list = Pkg.Types.PackageSpec[]
 
     # add registered pkg
     for pkg = ["CUDA", "IJulia", "HDF5", "NaNMath", "LsqFit", "Optim", "Interpolations",
          "Distributions", "DataStructures", "BenchmarkTools", "ProgressMeter",
          "Images", "Clustering", "MultivariateStats"]
-        push!(pkg_list, pkg)
-    end
-
-    # adding
-    for pkg = pkg_list
-        Pkg.add(pkg)
+        push!(pkg_list, Pkg.PackageSpec(name=pkg))
     end
 
     # add private pkg
@@ -23,6 +17,6 @@ function install_default()
 
     # adding
     for pkg = pkg_list
-      Pkg.add(pkg)
+      Pkg.add(pkg_list)
     end
 end
