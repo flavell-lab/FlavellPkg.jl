@@ -3,7 +3,7 @@ function check_develop(remote_url, verbose=true)
     branch_exists = false
 
     try
-        cmd_str = String(read(Cmd(`git ls-remote --heads $remote_url develop`))
+        cmd_str = String(read(Cmd(`git ls-remote --heads $remote_url develop`)))
         branch_exists = occursin("develop", cmd_str)
     catch e
     end
