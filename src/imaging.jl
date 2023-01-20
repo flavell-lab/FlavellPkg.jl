@@ -1,16 +1,10 @@
-import Pkg
-
 function install_imaging(install_dev_branch=false)
-    pkg_list = []
+    pkg_list = Pkg.Types.PackageSpec[]
 
     for pkg = ["Statistics", "StatsBase", "DelimitedFiles", "Cairo", "Interact", "WebIO",
         "Plots", "Dates", "JLD2", "VideoIO", "FFTW", "GLMNet", "Suppressor",
         "Revise", "InformationMeasures", "LsqFit"]
-       push!(pkg_list, pkg)
-    end
-
-    for pkg = pkg_list
-        Pkg.add(pkg)
+        push!(pkg_list, Pkg.PackageSpec(name=pkg))
     end
 
     # add private pkg
@@ -18,21 +12,15 @@ function install_imaging(install_dev_branch=false)
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
         "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR"]
 
-        if install_dev_branch
-            try
-                pkg_ = Pkg.PackageSpec(name=pkg,
-                    url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop")
-                Pkg.add(pkg_)
-            catch # develop does not exist
-                @warn("Develop branch of $(pkg) not found.")
-                pkg_ = Pkg.PackageSpec(name=pkg,
-                    url="git@github.com:flavell-lab/$(pkg).jl.git")
-                Pkg.add(pkg_)
-            end
+        remote_url = "git@github.com:flavell-lab/$(pkg).jl.git"
+        if install_dev_branch && check_develop(remote_url)
+            pkg_ = Pkg.PackageSpec(name=pkg, url="git@github.com:flavell-lab/$(pkg).jl.git", rev="develop")
+            push!(pkg_list, pkg_)
         else
-            pkg_ = Pkg.PackageSpec(name=pkg,
-                url="git@github.com:flavell-lab/$(pkg).jl.git")
-            Pkg.add(pkg_)
+            pkg_ = Pkg.PackageSpec(name=pkg, url="git@github.com:flavell-lab/$(pkg).jl.git")
+            push!(pkg_list, pkg_)
         end
     end
+
+    Pkg.add(pkg_list)
 end
