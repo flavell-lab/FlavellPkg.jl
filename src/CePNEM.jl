@@ -7,7 +7,7 @@ function install_CePNEM(install_dev_branch=false)
     end
 
     # add private pkg
-    for pkg = ["FlavellConstants","ANTSUNData","NeuroPALData","AnalysisBase","EncoderModel","EncoderModelGen","CePNEMAnalysis"]
+    for pkg = ["FlavellConstants","ANTSUNData","NeuroPALData","AnalysisBase","EncoderModel","CePNEM","CePNEMAnalysis"]
 
         remote_url = "git@github.com:flavell-lab/$(pkg).jl.git"
         if install_dev_branch && check_develop(remote_url)
