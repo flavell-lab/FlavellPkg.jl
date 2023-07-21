@@ -12,14 +12,19 @@ install_default()
 Ignore the warning message `Package FlavellPkg does not have ... in its dependencies`  
 
 ## Available install scripts
+Each install script installs many packages from the official Julia repositories, plus the Flavell Lab packages listed below.
 ### Default
 Command: `install_default()`  
-List: `PyCall`, `PyPlot`, `IJulia`, `HDF5`, `NaNMath`, `LsqFit`, `Optim`, `Interpolations`, `Distributions`, `DataStructures`, `BenchmarkTools`, `ProgressMeter`, `Images`, `Clustering`, `MultivariateStats`, `FlavellBase`
+List: `FlavellBase`
 
 ### Behavior packages
 Command: `install_behavior()`  
 List: `BehaviorData`, `BehaviorPlot`
 
-### Imaging packages
-Command: `install_imaging()`  
-List: `MHDIO`, `ImageDataIO`, `WormCurveFinder`, `WormFeatureDetector`, `SegmentationTools`, `CaAnalysis`, `ND2Process`, `RegistrationGraph`, `ExtractRegisteredData`
+### ANTSUN packages
+Command: `install_ANTSUN()`  
+List: `MHDIO`, `TotalVariation`, `SegmentationStats`, `GPUFilter`, `NRRDIO`, `FFTRegGPU`, `ImageDataIO`, `WormCurveFinder`, `Clustering`, `UNet2D`, `WormFeatureDetector`, `SegmentationTools`, `ND2Process`, `SLURMManager`, `RegistrationGraph`, `CaAnalysis`, `ExtractRegisteredData`, `BehaviorDataNIR`, `ANTSUNDataJLD2`
+
+### CePNEM packages
+Command: `install_CePNEM()`  
+List: `TotalVariation`, `FlavellConstants`, `ANTSUNData`, `NeuroPALData`, `AnalysisBase`, `EncoderModel`, `CePNEM`, `CePNEMAnalysis`, `HierarchicalPosteriorModel`, `ConnectomePlot`

@@ -1,16 +1,16 @@
-function install_imaging(install_dev_branch=false)
+function install_ANTSUNg(install_dev_branch=false)
     pkg_list = Pkg.Types.PackageSpec[]
 
     for pkg = ["Statistics", "StatsBase", "DelimitedFiles", "Cairo", "Interact", "WebIO",
         "Plots", "Dates", "JLD2", "VideoIO", "FFTW", "GLMNet", "InformationMeasures", "LsqFit",
-        "Rotations", "CoordinateTransformations", "ImageTransformations"]
+        "Rotations", "CoordinateTransformations", "ImageTransformations", "H5Zblosc"]
         push!(pkg_list, Pkg.PackageSpec(name=pkg))
     end
 
     # add private pkg
     for pkg = ["MHDIO","TotalVariation", "SegmentationStats", "GPUFilter", "NRRDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
-        "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR"]
+        "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR", "ANTSUNDataJLD2"]
 
         remote_url = "git@github.com:flavell-lab/$(pkg).jl.git"
         if install_dev_branch && check_develop(remote_url)
