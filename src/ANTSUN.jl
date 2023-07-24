@@ -10,7 +10,7 @@ function install_ANTSUN(install_dev_branch=false)
     # add private pkg
     for pkg = ["MHDIO","TotalVariation", "SegmentationStats", "GPUFilter", "NRRDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager",
-        "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR", "ANTSUNDataJLD2"]
+        "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR", "ANTSUNData", "ANTSUNDataJLD2"]
 
         remote_url = "git@github.com:flavell-lab/$(pkg).jl.git"
         if install_dev_branch && check_develop(remote_url)
