@@ -1,4 +1,4 @@
-function install_ANTSUNg(install_dev_branch=false)
+function install_ANTSUN(install_dev_branch=false)
     pkg_list = Pkg.Types.PackageSpec[]
 
     for pkg = ["Statistics", "StatsBase", "DelimitedFiles", "Cairo", "Interact", "WebIO",
