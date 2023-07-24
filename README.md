@@ -23,7 +23,7 @@ List: `BehaviorData`, `BehaviorPlot`
 
 ### ANTSUN packages
 Command: `install_ANTSUN()`  
-List: `MHDIO`, `TotalVariation`, `SegmentationStats`, `GPUFilter`, `NRRDIO`, `FFTRegGPU`, `ImageDataIO`, `WormCurveFinder`, `Clustering`, `UNet2D`, `WormFeatureDetector`, `SegmentationTools`, `ND2Process`, `SLURMManager`, `RegistrationGraph`, `CaAnalysis`, `ExtractRegisteredData`, `BehaviorDataNIR`, `ANTSUNDataJLD2`
+List: `MHDIO`, `TotalVariation`, `SegmentationStats`, `GPUFilter`, `NRRDIO`, `FFTRegGPU`, `ImageDataIO`, `WormCurveFinder`, `Clustering`, `UNet2D`, `WormFeatureDetector`, `SegmentationTools`, `ND2Process`, `SLURMManager`, `RegistrationGraph`, `CaAnalysis`, `ExtractRegisteredData`, `BehaviorDataNIR`, `FlavellConstants`, `ANTSUNData`, `ANTSUNDataJLD2`
 
 ### CePNEM packages
 Command: `install_CePNEM()`  
