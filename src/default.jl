@@ -5,7 +5,7 @@ function install_default()
     # add registered pkg
     for pkg = ["CUDA", "IJulia", "HDF5", "NaNMath", "LsqFit", "Optim", "Interpolations",
          "Distributions", "DataStructures", "BenchmarkTools", "ProgressMeter",
-         "Images", "Clustering", "MultivariateStats"]
+         "Images", "Clustering", "MultivariateStats", "StatsBase.jl"]
         push!(pkg_list, Pkg.PackageSpec(name=pkg))
     end
 
