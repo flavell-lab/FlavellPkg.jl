@@ -1,8 +1,8 @@
 function install_ANTSUN(install_dev_branch=false)
     pkg_list = Pkg.Types.PackageSpec[]
 
-    for pkg = ["Statistics", "StatsBase", "DelimitedFiles", "Cairo", "Interact", "WebIO",
-        "Plots", "Dates", "JLD2", "VideoIO", "FFTW", "GLMNet", "InformationMeasures", "LsqFit",
+    for pkg = ["DelimitedFiles", "Cairo", "Interact", "WebIO",
+        "Plots", "JLD2", "VideoIO", "FFTW", "GLMNet", "InformationMeasures", "LsqFit",
         "Rotations", "CoordinateTransformations", "ImageTransformations", "H5Zblosc"]
         push!(pkg_list, Pkg.PackageSpec(name=pkg))
     end
