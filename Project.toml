@@ -1,7 +1,7 @@
 name = "FlavellPkg"
 uuid = "9a491ba0-93a9-4ff4-b359-a8c284c7d4ba"
 authors = ["Jungsoo Kim <jungsoo@mit.edu>", "Adam Atanas <adamatanas@gmail.com>"]
-version = "0.3.1"
+version = "0.3.2"
 
 [deps]
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
