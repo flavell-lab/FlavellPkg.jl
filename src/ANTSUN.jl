@@ -8,7 +8,7 @@ function install_ANTSUN(install_dev_branch=false)
     end
 
     # add private pkg
-    for pkg = ["MHDIO","TotalVariation", "SegmentationStats", "GPUFilter", "NRRDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "Clustering", "UNet2D",
+    for pkg = ["MHDIO","TotalVariation", "SegmentationStats", "GPUFilter", "NRRDIO", "FFTRegGPU", "ImageDataIO", "WormCurveFinder", "SparseClustering", "UNet2D",
         "WormFeatureDetector", "SegmentationTools", "ND2Process", "SLURMManager", "FlavellConstants",
         "RegistrationGraph", "ExtractRegisteredData", "CaAnalysis", "BehaviorDataNIR", "ANTSUNData", "ANTSUNDataJLD2"]
 
