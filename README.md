@@ -11,6 +11,8 @@ install_default()
 ```
 Ignore the warning message `Package FlavellPkg does not have ... in its dependencies`  
 
+Note that for ANTSUN installation, if you are not in the Flavell lab you should use `v0.3.2` as later versions attempt to install code that is pending publication.
+
 ## Available install scripts
 Each install script installs many packages from the official Julia repositories, plus the Flavell Lab packages listed below.
 ### Default
