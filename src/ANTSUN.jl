@@ -5,7 +5,7 @@ function install_ANTSUN(install_dev_branch=false)
             "DelimitedFiles", "Cairo", "Interact", "WebIO",
             "Plots", "JLD2", "VideoIO", "FFTW", "GLMNet", "InformationMeasures", "LsqFit",
             "Rotations", "CoordinateTransformations", "ImageTransformations", "H5Zblosc",
-            "PyCall", "PyPlot", "Statistics", "GraphPlot", "LightGraphs", "SimpleWeightedGraphs", "Dates", "LinearAlgebra", "Optim", "Distributed"
+            "Statistics", "GraphPlot", "LightGraphs", "SimpleWeightedGraphs", "Dates", "LinearAlgebra", "Optim", "Distributed"
         ]
         push!(pkg_list, Pkg.PackageSpec(name=pkg))
     end 
